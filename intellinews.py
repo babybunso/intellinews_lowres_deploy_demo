@@ -33,8 +33,8 @@ DB_PATH = "intellinews.db"
 COLLECTION_NAME = "intellinews"
 
 
-load_dotenv()
-OPENAI_APIKEY = os.environ['OPENAI_APIKEY']
+# load_dotenv()
+OPENAI_APIKEY = st.keys('OPENAI_APIKEY') #os.environ['OPENAI_APIKEY']
 def get_openai_client():
     client = OpenAI(api_key=OPENAI_APIKEY)
     return client
