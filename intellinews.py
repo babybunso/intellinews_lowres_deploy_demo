@@ -1,8 +1,6 @@
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-# import subprocess
-# subprocess.run([f"{sys.executable}", "-m","spacy","download","en_core_web_sm"])
+# __import__('pysqlite3')
+# import sys
+# sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 
 
@@ -41,8 +39,9 @@ DB_PATH = "intellinews.db"
 COLLECTION_NAME = "intellinews"
 
 
-# load_dotenv()
-OPENAI_APIKEY = st.secrets['OPENAI_APIKEY'] #os.environ['OPENAI_APIKEY']
+load_dotenv()
+OPENAI_APIKEY = os.environ['OPENAI_APIKEY']
+# OPENAI_APIKEY = st.secrets['OPENAI_APIKEY']
 def get_openai_client():
     client = OpenAI(api_key=OPENAI_APIKEY)
     return client
