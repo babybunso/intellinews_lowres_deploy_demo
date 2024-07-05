@@ -10,4 +10,4 @@ spacy==3.7.5
 spacy_streamlit==1.0.6
 streamlit==1.31.1
 wordcloud==1.9.3
-pypdf
+pypdf==4.2.0
