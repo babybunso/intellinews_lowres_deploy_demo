@@ -1,0 +1,11 @@
+chromadb==0.4.24
+langchain_community==0.2.6
+matplotlib==3.8.3
+openai==1.35.10
+pandas==2.2.2
+scikit_learn==1.4.1.post1
+seaborn==0.13.2
+spacy==3.7.5
+spacy_streamlit==1.0.6
+streamlit==1.31.1
+wordcloud==1.9.3
