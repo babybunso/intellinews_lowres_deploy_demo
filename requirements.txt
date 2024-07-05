@@ -1,3 +1,4 @@
+pysqlite3-binary
 chromadb==0.4.24
 langchain_community==0.2.6
 matplotlib==3.8.3
