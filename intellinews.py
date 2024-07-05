@@ -25,7 +25,7 @@ from langchain_community.document_loaders import PyPDFLoader
 
 
 EMBEDDING_MODEL = 'text-embedding-3-large'  # 'text-embedding-3-small'
-SPACY_MODEL = spacy.load('en_core_web_sm') # 'en_core_web_lg'
+SPACY_MODEL = spacy.load(os.path.join(os.getcwd(), 'en_core_web_sm')) # 'en_core_web_lg'
 ENTITY_LABELS = ['PERSON', 'EVENT', 'DATE', 'GPE', 'ORG', 'FAC', 'LANGUAGE', 'LAW', 'LOC', 'MONEY', 'NORP', 'ORDINAL']
 CANDIDATE_LABELS = ['Economic Growth', 'Healthcare Reform', 'Education Initiatives', 'Infrastructure Development', 'Environmental Policies', 'Agricultural Support', 'Employment and Labor', 'Social Welfare Programs', 'Foreign Relations', 'Public Safety and Security']
 SUPPORTED_LANGUAGES_T = ['Finnish', 'Tagalog', 'Cebuano', 'Ilocano', 'Hiligaynon']
