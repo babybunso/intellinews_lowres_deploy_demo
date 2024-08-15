@@ -69,7 +69,7 @@ DOC_ANALYSIS_BASE_PROMPT = """
                         Policies Context: Identify which group of people will benefit and be affected by the policy.
                     Similarities: Similarities
                     Differences: Differences
-                    Reference: Reference phrase
+                    Justification with Evidence: Reference phrase/excerpts and source document (Source(s): Document 0, Document 1; Title(s): {{TITLE_0}} and {{TITLE_1}})
 
                 Keypoint 2: Keypoint 2 Title
                     Context: Context Summary
@@ -78,7 +78,7 @@ DOC_ANALYSIS_BASE_PROMPT = """
                         Policies Context: Identify which group of people will benefit and be affected by the policy.
                     Similarities: Similarities
                     Differences: Differences
-                    Reference: Reference phrase
+                    Justification with Evidence: Reference phrase/excerpts and source document (Source(s): Document 0, Document 1; Title(s): {{TITLE_0}})
 
                 ...
 
@@ -89,7 +89,9 @@ DOC_ANALYSIS_BASE_PROMPT = """
                         Policies Context: Identify which group of people will benefit and be affected by the policy.
                     Similarities: Similarities
                     Differences: Differences
-                    Reference: Reference phrase
+                    Justification with Evidence: Reference phrase/excerpts and source document (Source(s): Document 1; Title(s): {{TITLE_0}})
+
+            Conclusion: Overall summary of the analysis goes here
         """
         #     Recommendations: Recommendations / Action items
         # """
@@ -560,7 +562,7 @@ if options == "📚 Document Analysis":
                     document_analysis = generate_document_analysis(Q, results_df, llm, advanced_prompt)
                     st.write('___')
                     st.header('SENTINEL Document Analysis:')
-                    # st.write(document_analysis.replace('```markdown', '').replace('```', ''))
+                    # st.markdown(document_analysis.replace('```markdown', '').replace('```', ''))
                     st.markdown(document_analysis)
                     st.write('___')
                     # current_date = str(datetime.utcnow())
